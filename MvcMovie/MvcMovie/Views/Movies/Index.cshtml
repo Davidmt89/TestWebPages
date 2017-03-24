@@ -71,3 +71,10 @@
         }
     </tbody>
 </table>
+
+<a href="@Url.Action("Export","ImportExport")">Exportar Excel</a>
+<a href="@Url.Action("Import","ImportExport")">Importar Excel</a>
+<form method="post" action="@Url.Action("Import","ImportExport")" enctype="multipart/form-data">
+    <input type="file" id="uploadedfile" name="uploadedfile" enctype='multipart/form-data' />
+</form>
+

@@ -21,6 +21,11 @@ namespace MvcMovie
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
+
+            //Add route mapping
+            string sAppPath = env.ContentRootPath;
+            string swwwRootPath = env.WebRootPath;
+
             Configuration = builder.Build();
         }
 
